@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>MindOverScroll</title>
+</head>
+<body>
+  <header>
+    <h1>MindOverScroll</h1>
+
+    <ul class="mainNav">
+      <li><a href="#home" class="navList">Home</a></li>
+      <li><a href="#issue" class="navList">Addressed Issue</a></li>
+      <li><a href="#solution" class="navList">Solution</a></li>
+      <li><a href="#cta" id="ctaStyle">Call to Action</a></li>
+    </ul>
+  </header>
+
+  <main id="home">
+    <div class="heroSect">
+      <img src="./assets/logo.jpg" alt="" class="logo">
+      <span>
+        <h2>YOUR SCREEN SHOULDN'T CONTROL YOU</h2>
+        <p>Don't quit technology. Learn to use it properly</p>
+      </span>
+    </div>
+  </main>
+<hr>
+  <section id="issue">
+    <div class="sectionTitle">
+      <h2>The Addressed Issue: Doomscrolling & Digital Burnout</h2>
+      <p>Understanding the impact of unmonitored screen time on young learners.</p>
+    </div>
+
+    <div id="issueContainer">
+      <div class="issueCard">
+        <img src="./assets/scroll.jfif" alt="">
+        <h3>Compulsive Scrolling</h3>
+        <p>Over 70% of students spend 5+ hours daily on short-form video feeds, leading to shortened attention spans.</p>
+      </div>
+      <div class="issueCard">
+        <img src="./assets/stress.jpg" alt="" class="issueCardImg">
+        <h3>Mental Fatigue</h3>
+        <p>Continuous information overload contributes to heightened anxiety, social comparison, and brain fog.</p>
+      </div>
+      <div class="issueCard">
+        <img src="./assets/fail.jfif" alt="">
+        <h3>Academic Decline</h3>
+        <p>Late-night phone usage directly degrades memory retention and classroom engagement.</p>
+      </div>
+      <div class="issueCard">
+        <img src="./assets/influence.jpg" alt="">
+        <h3>Social Media Influence</h3>
+        <p>Constant exposure to trends, opinions, and idealized lifestyles can shape how young people think, behave, and view themselves and others.</p>
+      </div>
+    </div>
+  </section>
+<hr>
+  <section id="solution">
+    <div class="section-title">
+      <h2>Our Proposed Solution: 30-Day Digital Balance Roadmap</h2>
+      <p>Actionable, student-friendly habits to rebuild healthy screen boundaries.</p>
+    </div>
+    <div class="solution-box">
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-number">1</div>
+                        <div class="timeline-content">
+                            <h4>The Golden Hour Rule</h4>
+                            <p>Keep mobile devices turned off or out of reach 45 minutes before bedtime and 30 minutes after waking up.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-number">2</div>
+                        <div class="timeline-content">
+                            <h4>Notification Audit</h4>
+                            <p>Silence non-human alerts and social media banners during designated study sessions and group tasks.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-number">3</div>
+                        <div class="timeline-content">
+                            <h4>Screen-Free Hobbies</h4>
+                            <p>Dedicate at least 1 hour every evening to physical exercise, reading, or face-to-face interaction.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+  </section>
+<hr>
+  <section id="miniTracker">
+    <div class="tracker" id="tracker">
+      
+      <!-- ===== Header ===== -->
+      <p class="tracker__phase">Phase 1 · Awareness</p>
+      <h1 class="tracker__title">We offer free Tracker for the 30 day Roadmap</h1>
+    
+      <!-- ===== Stats ===== -->
+      <div class="tracker__stats">
+        <div class="stat">
+          <span class="stat__value" id="stat-days">2 / 30</span>
+          <span class="stat__label">Days completed</span>
+        </div>
+        <div class="stat">
+          <span class="stat__value" id="stat-streak">🔥 2</span>
+          <span class="stat__label">Current streak</span>
+        </div>
+        <div class="stat">
+          <span class="stat__value" id="stat-habits">5 / 24</span>
+          <span class="stat__label">Habits completed</span>
+        </div>
+      </div>
+    
+      <!-- ===== Progress bar ===== -->
+      <div class="progress">
+        <div class="progress__track">
+          <div class="progress__fill" id="progress-fill"></div>
+        </div>
+        <p class="progress__caption" id="progress-caption">2 of 30 days done</p>
+      </div>
+    
+      <!-- ===== 30-day grid, grouped by phase =====
+          data-day is what your JS reads on click.
+          Swap classes day-cell--done / --current / --locked based on trackerState. -->
+      <div class="grid-phase">
+        <p class="grid-phase__label">Days 1–7 <span>· Awareness</span></p>
+        <div class="day-grid">
+          <button class="day-cell day-cell--done" data-day="1">01</button>
+          <button class="day-cell day-cell--done" data-day="2">02</button>
+          <button class="day-cell day-cell--current" data-day="3">03</button>
+          <button class="day-cell day-cell--locked" data-day="4">04</button>
+          <button class="day-cell day-cell--locked" data-day="5">05</button>
+          <button class="day-cell day-cell--locked" data-day="6">06</button>
+          <button class="day-cell day-cell--locked" data-day="7">07</button>
+        </div>
+      </div>
+    
+      <div class="grid-phase">
+        <p class="grid-phase__label">Days 8–14 <span>· Interrupt</span></p>
+        <div class="day-grid">
+          <button class="day-cell day-cell--locked" data-day="8">08</button>
+          <button class="day-cell day-cell--locked" data-day="9">09</button>
+          <button class="day-cell day-cell--locked" data-day="10">10</button>
+          <button class="day-cell day-cell--locked" data-day="11">11</button>
+          <button class="day-cell day-cell--locked" data-day="12">12</button>
+          <button class="day-cell day-cell--locked" data-day="13">13</button>
+          <button class="day-cell day-cell--locked" data-day="14">14</button>
+        </div>
+      </div>
+    
+      <div class="grid-phase">
+        <p class="grid-phase__label">Days 15–21 <span>· Replace</span></p>
+        <div class="day-grid">
+          <button class="day-cell day-cell--locked" data-day="15">15</button>
+          <button class="day-cell day-cell--locked" data-day="16">16</button>
+          <button class="day-cell day-cell--locked" data-day="17">17</button>
+          <button class="day-cell day-cell--locked" data-day="18">18</button>
+          <button class="day-cell day-cell--locked" data-day="19">19</button>
+          <button class="day-cell day-cell--locked" data-day="20">20</button>
+          <button class="day-cell day-cell--locked" data-day="21">21</button>
+        </div>
+      </div>
+    
+      <div class="grid-phase">
+        <p class="grid-phase__label">Days 22–30 <span>· Balance</span></p>
+        <div class="day-grid">
+          <button class="day-cell day-cell--locked" data-day="22">22</button>
+          <button class="day-cell day-cell--locked" data-day="23">23</button>
+          <button class="day-cell day-cell--locked" data-day="24">24</button>
+          <button class="day-cell day-cell--locked" data-day="25">25</button>
+          <button class="day-cell day-cell--locked" data-day="26">26</button>
+          <button class="day-cell day-cell--locked" data-day="27">27</button>
+          <button class="day-cell day-cell--locked" data-day="28">28</button>
+          <button class="day-cell day-cell--locked" data-day="29">29</button>
+          <button class="day-cell day-cell--locked" data-day="30">30</button>
+        </div>
+      </div>
+    
+      <!-- ===== Day detail panel =====
+          id="day-panel-title" and the habit list get repainted by your
+          renderDay(dayNumber) function whenever a day cell is clicked. -->
+      <div class="day-panel">
+        <h2 class="day-panel__title" id="day-panel-title">Day 3</h2>
+    
+        <ul class="habit-list" id="habit-list">
+          <li class="habit">
+            <input type="checkbox" id="habit-meals" data-habit="meals">
+            <label for="habit-meals">No phone during meals</label>
+          </li>
+          <li class="habit">
+            <input type="checkbox" id="habit-screenfree" data-habit="screenFreeBed">
+            <label for="habit-screenfree">30-min screen-free before bed</label>
+          </li>
+          <li class="habit">
+            <input type="checkbox" id="habit-break" data-habit="tookBreak">
+            <label for="habit-break">Took a 10-min break from screen</label>
+          </li>
+        </ul>
+    
+        <button class="complete-day-btn" id="complete-day-btn">Complete Day</button>
+      </div>
+    
+    </div>
+  </section>
+
+  <section id="cta">
+    <div id="action" class="tab-content">
+            <div class="interactive-container">
+                <h2>Take Action: Sign The Pledge</h2>
+                <p>Join fellow students in committing to healthy screen habits.</p>
+
+                <div class="pledge-box">
+                    <h3>Total Youth Pledges</h3>
+                    <div class="counter" id="pledgeCounter">1</div>
+                    <button class="btn-pledge" id="pledgeBtn" onclick="submitPledge()">Sign The Digital Balance Pledge</button>
+                </div>
+            </div>
+        </div>
+  </section>
+
+  <footer>
+    <p>YOUR SCREEN IS A TOOL. YOU ARE IN CONTROL. MIND OVER SCROLL. SCROLL WITH PURPOSE.</p>
+    <p>By: Group 3 GNED-05, From BSIT 1-6</p>
+    <p>Members: Mendoza, Pavo, Dimata, Cullo</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
